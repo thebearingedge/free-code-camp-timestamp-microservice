@@ -48,4 +48,4 @@ app.get('/:dateString', ({ params }, res) => {
 })
 
 
-app.listen(8080, _ => console.log('listening on 8080'))
+app.listen(80, _ => console.log('listening on 8080'))
