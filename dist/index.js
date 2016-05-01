@@ -53,4 +53,4 @@ app.get('/:dateString', function (_ref, res) {
   return res.json(fromDate(date));
 });
 
-app.listen(80);
+app.listen(process.env.PORT || 8080);
