@@ -1,0 +1,25 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist",
+    "start": "npm run build && node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebearingedge/free-code-camp-timestamp-microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebearingedge/free-code-camp-timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/thebearingedge/free-code-camp-timestamp-microservice#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "fecha": "^2.1.0"
+  }
+}
