@@ -53,6 +53,4 @@ app.get('/:dateString', function (_ref, res) {
   return res.json(fromDate(date));
 });
 
-app.listen(8080, function (_) {
-  return console.log('listening on 8080');
-});
+app.listen(80);
