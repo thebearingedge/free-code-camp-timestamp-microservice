@@ -1,9 +1,11 @@
 
 import express from 'express'
 import fecha from 'fecha'
+import { resolve } from 'path'
 
 
 const app = express()
+const indexHTML = resolve(__dirname, '../public/index.html')
 
 
 const isTimestamp = value => !isNaN(value)
@@ -26,6 +28,9 @@ const fromDate = date => {
   
   return { unix, natural }
 }
+
+
+app.get('/', (_, res) => res.sendFile(indexHTML))
 
 
 app.get('/:dateString', ({ params }, res) => {

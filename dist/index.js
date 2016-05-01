@@ -8,9 +8,12 @@ var _fecha = require('fecha');
 
 var _fecha2 = _interopRequireDefault(_fecha);
 
+var _path = require('path');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
+var indexHTML = (0, _path.resolve)(__dirname, '../public/index.html');
 
 var isTimestamp = function isTimestamp(value) {
   return !isNaN(value);
@@ -32,6 +35,10 @@ var fromDate = function fromDate(date) {
 
   return { unix: unix, natural: natural };
 };
+
+app.get('/', function (_, res) {
+  return res.sendFile(indexHTML);
+});
 
 app.get('/:dateString', function (_ref, res) {
   var params = _ref.params;
